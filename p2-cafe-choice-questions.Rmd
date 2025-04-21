@@ -1,0 +1,168 @@
+---
+output: html_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse   = TRUE,
+  warning    = FALSE,
+  message    = FALSE,
+  comment    = "#>",
+  fig.path   = "man/figures/",
+  fig.retina = 3
+)
+```
+
+```{r, include=FALSE}
+# Read in the choice questions
+library(tidyverse)
+survey <- read_csv("https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/choice_questions.csv")
+
+# Define the respondent ID
+respondentID <- sample(survey$respID, 1)
+
+# Create the subset of rows for that respondent ID
+df <- survey %>%
+    filter(respID == respondentID) %>%
+    mutate(image = paste0("https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/survey/images/", image))
+
+# Convert df to json
+df_json <- jsonlite::toJSON(df)
+```
+
+# Ótimo trabalho!
+
+Agora que você compartilhou um pouco sobre si, gostaríamos que considerasse um cenário de compra no qual você poderá escolher um café para comprar entre várias opções com diferentes atributos. <br>
+
+Vamos conhecer esses atributos."
+"
+## Origem
+
+A origem será apresentada como duas regiões produtoras:
+
+
+<div style=""text-align: center;"">
+  <img src=""https://formr.org/assets/tmp/admin/aX6dTmFbkiecwj_8r1JI/IG.png?v1745159081"" width=250>
+</div>
+
+
+- **Brazil Central **: Região produtora emergente localizada no Cerrado do Distrito Federal, com altitudes entre 1000 e 1350 m, relevo predominantemente plano e vegetação de savana. O clima é tropical sazonal, com inverno seco e verão chuvoso, favorecendo floradas bem definidas e maturação uniforme dos frutos. 
+
+- **Sul de Minas**: Região tradicional de produção de cafés especiais no Brasil, com altitudes entre 850 e 1400 m, relevo montanhoso e clima ameno. As estações são bem definidas, com inverno seco e frio e verão chuvoso, o que favorece a maturação lenta dos grãos. Os cafés do Sul de Minas são valorizados por sua acidez equilibrada, corpo cremoso e notas sensoriais florais, frutadas e de caramelo.
+
+## Processamento
+
+O processamento do café afeta o sabor final. Os dois principais métodos são:
+
+- **Processo Natural:**: Método tradicional. Os frutos do café secam com o caroço intacto, permitindo que os açúcares e a mucilagem fermentem junto ao grão, produzindo sabores doces e licorosos.
+
+- **Processo Lavado**: Também conhecido como cereja despolpado, pois a polpa é removida antes da secagem, resultando em um café mais limpo, com corpo mais leve e acidez pronunciada.
+
+## Certificações
+
+As certificações são selos verificados por terceiros que indicam que o café atende a padrões específicos relacionados à sustentabilidade, comércio ético, responsabilidade ambiental ou garantia de qualidade.
+
+**Orgânico (Organic):** Indica que o café foi cultivado sem o uso de agrotóxicos, fertilizantes sintéticos ou organismos geneticamente modificados, respeitando os princípios da agricultura orgânica.
+
+<div style=""text-align: center;"">
+<img src=""https://formr.org/assets/tmp/admin/Z-DnkgO3JGg4vnnDwpEP/c_organic.jpg?v1745158159"" width=150>
+</div>
+
+**Comércio Justo (Fair Trade):** Garante que o café foi produzido seguindo práticas comerciais éticas, com pagamento justo aos produtores, melhores condições de trabalho e apoio ao desenvolvimento sustentável das comunidades.
+
+<div style=""text-align: center;"">
+<img src=""https://formr.org/assets/tmp/admin/Z-DnkgO3JGg4vnnDwpEP/c_fairtrade.jpg?v1745158159"" width=150>
+</div>
+
+**Especial (Special):** Refere-se a cafés que atingem pontuação igual ou superior a 80 pontos em avaliações sensoriais, segundo critérios da Specialty Coffee Association (SCA), representando alta qualidade de bebida.
+
+<div style=""text-align: center;"">
+<img src=""https://formr.org/assets/tmp/admin/Z-DnkgO3JGg4vnnDwpEP/c_special.png?v1745158159"" width=130>
+</div>
+
+**Agroflorestal (Rainforestry Alliance):** Certificação que assegura práticas sustentáveis de cultivo, com foco na conservação ambiental, respeito aos direitos trabalhistas e promoção do bem-estar das comunidades rurais. O selo representa a harmonia entre produção agrícola e preservação dos ecossistemas.
+
+<div style=""text-align: center;"">
+<img src=""https://formr.org/assets/tmp/admin/Z-DnkgO3JGg4vnnDwpEP/c_agroforestry.jpg?v1745158159"" width=80>
+</div>
+
+
+"
+---
+
+Agora começaremos as tarefas de escolha. Nas próximas páginas, apresentaremos três opções de café e pediremos que você escolha a que preferir.
+Por exemplo, se esses fossem os únicos cafés disponíveis, e considerando que diferenças de preço não afetem sua escolha,  qual você escolheria?
+
+[mc_button type question with the following three options]
+
+"**Opção 1**
+
+<img src=""https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/images/none.jpg"" width=100>
+
+**Origem**: Brasil Central
+**Processamento**: Natural
+**Certificação**: Nenhum"
+
+"**Opção 2**
+
+<img src=""https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/images/organic.jpg"" width=100>
+
+**Origem**: Brasil Central
+**Processamento**: Natural
+**Certificação**: Orgânico"
+
+"**Opção 3**
+
+<img src=""https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/images/agroforestry.jpg"" width=100>
+
+**Origem**: Brasil Central
+**Processamento**: Natural
+**Certificação**: Rain Foresty Alliance"
+---
+
+"# Ótimo trabalho!
+Agora apresentaremos 16 conjuntos de perguntas de escolha a partir da próxima página.
+Você também terá a opção de não escolher nenhum deles."
+
+---
+
+[mc_button type question with the following three options]
+
+(1 of 16) Se essas fossem suas únicas opções, qual você escolheria?
+
+```{r, include=FALSE}
+library(dplyr)
+alts <- jsonlite::fromJSON(df_json) %>% 
+  filter(qID == 1)
+alt1 <- alts %>% filter(altID == 1)
+alt2 <- alts %>% filter(altID == 2)
+alt3 <- alts %>% filter(altID == 3)
+```
+
+**Opção 1**
+
+<img src=`r alt1$image` width=100>
+
+
+**Price**: $ `r alt1$price` / 250g
+**Origin**: `r alt1$origin`
+**Processing**: `r alt1$processing`
+**SCA**: `r alt1$SCA`
+
+**Opção 2**
+
+<img src=`r alt2$image` width=100>
+
+**Price**: $ `r alt2$price` / 250g
+**Origin**: `r alt2$origin`
+**Processing**: `r alt2$processing`
+**SCA**: `r alt2$SCA`
+
+**Opção 3**
+
+<img src=`r alt3$image` width=100>
+
+**Price**: $ `r alt3$price` / 250g
+**Origin**: `r alt3$origin`
+**Processing**: `r alt3$processing`
+**SCA**: `r alt3$SCA`
