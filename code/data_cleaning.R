@@ -46,7 +46,7 @@ p3 <- p3 %>%
     ended =  ymd_hms(ended),
     time_sec_p3 = as.numeric(ended - created, units = "secs")) %>%
   # Select important columns
-  select(session, time_sec_p3, yearOfBirth:feedback)
+  select(session, time_sec_p3, muchcoffee:feedback)
 
 p4 <- p4 %>% 
   mutate(
