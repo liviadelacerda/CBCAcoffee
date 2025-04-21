@@ -11,7 +11,7 @@ options(dplyr.width = Inf)
 p1 <- read_csv(here("data", "CafeConjoint_p1.csv"))
 p2 <- read_csv(here("data", "CafeConjoint_p2.csv"))
 p3 <- read_csv(here("data", "CafeConjoint_p3.csv"))
-p4 <- read_csv(here("data", "CafeConjoint_p4.csv))
+p4 <- read_csv(here("data", "CafeConjoint_p4.csv"))
 
 
 # Format and join the three surveys -------
@@ -30,7 +30,7 @@ p1 <- p1 %>%
     ended =  ymd_hms(ended, tz = "EST"),
     time_sec_p1 = as.numeric(ended - created, units = "secs")) %>%
   # Select important columns
-  select(session, time_sec_p1, likeFruit, favFruit, screenout)
+  select(session, time_sec_p1, likecoffee, freqcoffee, screenout)
 
 p2 <- p2 %>% 
   mutate(
@@ -41,6 +41,14 @@ p2 <- p2 %>%
   select(session, time_sec_p2, respondentID, starts_with("cbc"), cbcAllSame)
 
 p3 <- p3 %>% 
+  mutate(
+    created = ymd_hms(created),
+    ended =  ymd_hms(ended),
+    time_sec_p3 = as.numeric(ended - created, units = "secs")) %>%
+  # Select important columns
+  select(session, time_sec_p3, yearOfBirth:feedback)
+
+p4 <- p4 %>% 
   mutate(
     created = ymd_hms(created),
     ended =  ymd_hms(ended),
