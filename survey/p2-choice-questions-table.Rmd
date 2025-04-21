@@ -88,7 +88,8 @@ As certificações são selos verificados por terceiros que indicam que o café 
 
 Organic | Fair Trade | Special | Rainforestry 
 -----|------|------------|-----------
-<img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/organic.jpg" width=100> | <img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/images/survey/fairtrade.jpg" width=100> | <img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/images/survey/special.png" width=100> | <img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/images/survey/agroforestry.jpg" width=100> 
+<img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/organic.jpg" width=100> | <img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/fairtrade.jpg" width=100> | <img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/special.png" width=100> | <img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/agroforestry.jpg" width=100> 
+
 
 ---
 
