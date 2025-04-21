@@ -55,7 +55,7 @@ model <- logitr(
     outcome = "choice",
     obsID   = "obs_id",
     pars = c(
-        "Certification_Especial", "Certification_Orgânico", "Certification_Fair trade", "Certificatin_Rainforest Alliance"
+        "Certification_Especial", "Certification_Organico", "Certification_Fair trade", "Certification_Rainforest Alliance"
         "Origin_Brasil Central", "Origin_Sul de Minas",
         "Processing_Natural", "Processing_Lavado")
 )
