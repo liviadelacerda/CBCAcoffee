@@ -13,49 +13,58 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Welcome to our survey!
+# Bem-vindo(a) à nossa pesquisa!
 
 
-Thank you for participating in this survey, which is part of a research effort by The  University of Brasilia. For this survey, we will ask you about your preferences for different types of coffees.
-
----
-
-# Consent form
-
-This survey is being conducted by researchers from University of Brasilia and University of Denmark. We will not be collecting any identifying data, such as your name or address. The whole survey will take approximately 10 to 15 minutes to complete. Your participation is voluntary and you may stop the survey at any time.
-
-If you would like to participate, please answer the following questions:
-
-I am age 18 or older
-
-- Yes
-- No
-
-I have read and understand the above information
-
-- Yes
-- No
+Agradecemos por participar. Nesta pesquisa, perguntaremos sobre suas preferências em relação a diferentes tipos de café.
 
 ---
 
-Do you like coffee?
+# Termo de Consentimento Livre e Esclarecido
 
-- Yes!
-- Kind of
-- No :(
+Esta pesquisa está sendo conduzida por pesquisadores do Grupo de Pesquisa Café da Universidade de Brasília, sob a supervisão da Prof.ª Lívia de Lacerda de Oliveira. Não coletaremos nenhum dado identificável, como seu nome ou endereço. Toda a pesquisa levará aproximadamente de 10 a 15 minutos para ser concluída. Os dados são protegidos por senha com acesso exclusivo pela supervisora. Sua participação é voluntária e você pode interromper a pesquisa a qualquer momento.
 
-How do you often buy coffee?
+Se desejar participar, por favor, responda às perguntas a seguir:
 
-- As whole roasted beans
-- Ground
-- Capsules
-- Ready-to-drink
+Tenho 18 anos ou mais
+
+- Sim
+- Não
+
+Li e entendo as informações acima
+
+- Sim
+- Não
 
 ---
 
-Before we go on, please select the frequency you BUY coffee:
+Você gosta de café?
 
-- Frequently
-- Rarely
+- Sim!
+- Um pouco
+- Não :(
 
-(For this example, I'm using the response here to screen out respondents - I'm only interested in people who choose "Frequently", so if you choose "Rarely" you'll be screened out. Usually you would not tell respondents ahead of time how they will be screened - I'm just putting an explanation here since this whole survey is for demonstration purposes)
+Com que frequência você bebe café?
+
+- 2 vezes ao dia ou mais
+- Uma vez ao dia
+- Regularmente (quase todo dia)
+- Ocasionalmente (até 3 vezes por semana)
+-Raramente
+
+Como você compra café mais frequentemente?
+
+- Grãos verdes
+- Grãos torrados
+- Torrado e moído
+- Em cápsulas
+- Solúvel
+- Bebida pronta
+
+---
+
+Antes de continuarmos, por favor selecione a opção que melhor descreve você: 
+
+- Sou eu quem compra o café para minha casa
+- Eu consumo café, mas não sou eu quem o compra para minha casa
+
