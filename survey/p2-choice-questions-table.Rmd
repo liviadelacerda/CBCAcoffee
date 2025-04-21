@@ -1,4 +1,4 @@
----
+/---
 output: html_document
 ---
 
@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 ```{r, include=FALSE}
 # Read in the choice questions
 library(tidyverse)
-survey <- read_csv("https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/choice_questions.csv")
+survey <- read_csv("https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/choice_questions.csv")
 
 # Define the respondent ID
 respondentID <- sample(survey$respID, 1)
@@ -32,17 +32,18 @@ df_json <- jsonlite::toJSON(df)
 
 # Ótimo trabalho!
 
-Agora que você compartilhou um pouco sobre si, gostaríamos que considerasse um cenário de compra no qual você poderá escolher um café para comprar entre várias opções com diferentes atributos. <br>
+Agora que você compartilhou um pouco sobre si, gostaríamos que considerasse um cenário de compra no qual você poderá escolher um café para comprar entre várias opções com diferentes atributos. 
 
-Vamos conhecer esses atributos."
+Vamos conhecer esses atributos.
+
 "
 ## Origem
 
 A origem será apresentada como duas regiões produtoras:
 
 
-<div style=""text-align: center;"">
-  <img src=""https://formr.org/assets/tmp/admin/aX6dTmFbkiecwj_8r1JI/IG.png?v1745159081"" width=250>
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/IG.png" width=250>
 </div>
 
 
@@ -53,7 +54,6 @@ A origem será apresentada como duas regiões produtoras:
 ## Processamento
 
 O processamento do café afeta o sabor final. Os dois principais métodos são:
-
 - **Processo Natural:**: Método tradicional. Os frutos do café secam com o caroço intacto, permitindo que os açúcares e a mucilagem fermentem junto ao grão, produzindo sabores doces e licorosos.
 
 - **Processo Lavado**: Também conhecido como cereja despolpado, pois a polpa é removida antes da secagem, resultando em um café mais limpo, com corpo mais leve e acidez pronunciada.
@@ -64,30 +64,28 @@ As certificações são selos verificados por terceiros que indicam que o café 
 
 **Orgânico (Organic):** Indica que o café foi cultivado sem o uso de agrotóxicos, fertilizantes sintéticos ou organismos geneticamente modificados, respeitando os princípios da agricultura orgânica.
 
-<div style=""text-align: center;"">
-<img src=""https://formr.org/assets/tmp/admin/Z-DnkgO3JGg4vnnDwpEP/c_organic.jpg?v1745158159"" width=150>
+<div style="text-align: center;">
+<img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/c_organic.jpg" width=150>
 </div>
 
 **Comércio Justo (Fair Trade):** Garante que o café foi produzido seguindo práticas comerciais éticas, com pagamento justo aos produtores, melhores condições de trabalho e apoio ao desenvolvimento sustentável das comunidades.
 
-<div style=""text-align: center;"">
-<img src=""https://formr.org/assets/tmp/admin/Z-DnkgO3JGg4vnnDwpEP/c_fairtrade.jpg?v1745158159"" width=150>
+<div style="text-align: center;">
+<img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/c_fairtrade.jpg" width=150>
 </div>
 
 **Especial (Special):** Refere-se a cafés que atingem pontuação igual ou superior a 80 pontos em avaliações sensoriais, segundo critérios da Specialty Coffee Association (SCA), representando alta qualidade de bebida.
 
-<div style=""text-align: center;"">
-<img src=""https://formr.org/assets/tmp/admin/Z-DnkgO3JGg4vnnDwpEP/c_special.png?v1745158159"" width=130>
+<div style="text-align: center;">
+<img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/c_special.png" width=130>
 </div>
 
 **Agroflorestal (Rainforestry Alliance):** Certificação que assegura práticas sustentáveis de cultivo, com foco na conservação ambiental, respeito aos direitos trabalhistas e promoção do bem-estar das comunidades rurais. O selo representa a harmonia entre produção agrícola e preservação dos ecossistemas.
 
-<div style=""text-align: center;"">
-<img src=""https://formr.org/assets/tmp/admin/Z-DnkgO3JGg4vnnDwpEP/c_agroforestry.jpg?v1745158159"" width=80>
+<div style="text-align: center;">
+<img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/c_agroforestry.jpg" width=80>
 </div>
 
-
-"
 ---
 
 Agora começaremos as tarefas de escolha. Nas próximas páginas, apresentaremos três opções de café e pediremos que você escolha a que preferir.
@@ -95,34 +93,34 @@ Por exemplo, se esses fossem os únicos cafés disponíveis, e considerando que 
 
 [mc_button type question with the following three options]
 
-"**Opção 1**
+**Opção 1**
 
-<img src=""https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/images/none.jpg"" width=100>
-
-**Origem**: Brasil Central
-**Processamento**: Natural
-**Certificação**: Nenhum"
-
-"**Opção 2**
-
-<img src=""https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/images/organic.jpg"" width=100>
+<img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/none.jpg" width=100>
 
 **Origem**: Brasil Central
 **Processamento**: Natural
-**Certificação**: Orgânico"
+**Certificação**: Nenhum
 
-"**Opção 3**
+**Opção 2**
 
-<img src=""https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/images/agroforestry.jpg"" width=100>
+<img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/organic.jpg" width=100>
 
 **Origem**: Brasil Central
 **Processamento**: Natural
-**Certificação**: Rain Foresty Alliance"
+**Certificação**: Orgânico
+
+**Opção 3**
+
+<img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/agroforestry.jpg" width=100>
+
+**Origem**: Brasil Central
+**Processamento**: Natural
+**Certificação**: Rain Foresty Alliance
 ---
 
-"# Ótimo trabalho!
+# Ótimo trabalho!
 Agora apresentaremos 16 conjuntos de perguntas de escolha a partir da próxima página.
-Você também terá a opção de não escolher nenhum deles."
+Você também terá a opção de não escolher nenhum deles.
 
 ---
 
@@ -138,31 +136,26 @@ alt1 <- alts %>% filter(altID == 1)
 alt2 <- alts %>% filter(altID == 2)
 alt3 <- alts %>% filter(altID == 3)
 ```
-
 **Opção 1**
 
 <img src=`r alt1$image` width=100>
 
-
-**Price**: $ `r alt1$price` / 250g
-**Origin**: `r alt1$origin`
-**Processing**: `r alt1$processing`
-**SCA**: `r alt1$SCA`
+**Certificação**: `r alt1$Certification`
+**Origem**: `r alt1$Origin` 
+**Processamento**: `r alt1$Processing`
 
 **Opção 2**
 
 <img src=`r alt2$image` width=100>
 
-**Price**: $ `r alt2$price` / 250g
-**Origin**: `r alt2$origin`
-**Processing**: `r alt2$processing`
-**SCA**: `r alt2$SCA`
+**Certificação**: `r alt2$Certification`
+**Origem**: `r alt2$Origin` 
+**Processamento**: `r alt2$Processing`
 
 **Opção 3**
 
 <img src=`r alt3$image` width=100>
 
-**Price**: $ `r alt3$price` / 250g
-**Origin**: `r alt3$origin`
-**Processing**: `r alt3$processing`
-**SCA**: `r alt3$SCA`
+**Certificação**: `r alt3$Certification`
+**Origem**: `r alt3$Origin` 
+**Processamento**: `r alt3$Processing`
