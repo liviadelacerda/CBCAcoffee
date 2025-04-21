@@ -1,4 +1,4 @@
-/---
+---
 output: html_document
 ---
 
@@ -85,6 +85,10 @@ As certificações são selos verificados por terceiros que indicam que o café 
 <div style="text-align: center;">
 <img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/c_agroforestry.jpg" width=80>
 </div>
+
+Organic | Fair Trade | Special | Rainforestry 
+-----|------|------------|-----------
+<img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/images/organic.jpg" width=100> | <img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/images/survey/fairtrade.jpg" width=100> | <img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/images/survey/special.png" width=100> | <img src="https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/images/survey/agroforestry.jpg" width=100> 
 
 ---
 
