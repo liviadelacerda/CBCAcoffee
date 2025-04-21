@@ -16,7 +16,7 @@ head(data)
 # Estimate MNL model
 
 # First create some dummy coded variables for categorical variables
-data <- dummy_cols(data, c('type', 'freshness'))
+data <- dummy_cols(data, c('Certification', 'Origin', 'Processing'))
 
 # Clean up names of created variables
 data <- clean_names(data)
@@ -44,7 +44,7 @@ head(data)
 # Estimate MNL model
 
 # First create some dummy coded variables for categorical variables
-data <- dummy_cols(data, c('type', 'freshness'))
+data <- dummy_cols(data, c('Certification', 'Origin', 'Processing'))
 
 # Clean up names of created variables
 data <- clean_names(data)
