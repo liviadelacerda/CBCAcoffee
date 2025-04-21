@@ -8,10 +8,10 @@ library(tidyverse)
 options(dplyr.width = Inf)
 
 # Import raw data
-p1 <- read_csv(here("data", "appleConjoint_p1.csv"))
-p2 <- read_csv(here("data", "appleConjoint_p2.csv"))
-p3 <- read_csv(here("data", "appleConjoint_p3.csv"))
-
+p1 <- read_csv(here("data", "CafeConjoint_p1.csv"))
+p2 <- read_csv(here("data", "CafeConjoint_p2.csv"))
+p3 <- read_csv(here("data", "CafeConjoint_p3.csv"))
+p4 <- read_csv(here("data", "CafeConjoint_p4.csv))
 
 
 # Format and join the three surveys -------
@@ -77,7 +77,15 @@ data <- data %>%
   filter(!is.na(cbc5)) %>% 
   filter(!is.na(cbc6)) %>% 
   filter(!is.na(cbc7)) %>% 
-  filter(!is.na(cbc8))
+  filter(!is.na(cbc8)) %>% 
+  filter(!is.na(cbc9)) %>% 
+  filter(!is.na(cbc10)) %>% 
+  filter(!is.na(cbc11)) %>% 
+  filter(!is.na(cbc12)) %>% 
+  filter(!is.na(cbc13)) %>% 
+  filter(!is.na(cbc14)) %>% 
+  filter(!is.na(cbc15)) %>% 
+  filter(!is.na(cbc16))
 nrow(data)
 
 # Drop respondents who went too fast
@@ -113,7 +121,7 @@ nrow(data)
 # First convert the data to long format
 choiceData <- data %>% 
     pivot_longer(
-        cols = cbc1:cbc8,
+        cols = cbc1:cbc16,
         names_to = "qID",
         values_to = "choice") %>% 
     # Convert the qID variable to a number
@@ -122,7 +130,7 @@ choiceData <- data %>%
 head(choiceData)
 
 # Read in choice questions and join it to the choiceData
-survey <- read_csv("https://raw.githubusercontent.com/jhelvy/formr4conjoint/master/survey/choice_questions.csv")
+survey <- read_csv("https://raw.githubusercontent.com/liviadelacerda/CBCAcoffee/main/survey/choice_questions.csv")
 choiceData <- choiceData %>% 
     rename(respID = respondentID) %>% 
     left_join(survey, by = c("respID", "qID"))
